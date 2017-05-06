@@ -1,30 +1,73 @@
-
+ <!--주점탭 시작-->
+ 
+ 
+<div>
+   <div class="row card-panel ">
+       단대 섹션 검색창
+    </div>
+</div>
   
-<ul id="tabs-swipe-demo" class="tabs row">
-       <li class="tab col s6"><a href="#test-swipe-1">칵스피드</a></li>
-       <li class="tab col s6"><a class="active" href="#test-swipe-2">지도</a></li>
-   </ul>
-   
- 
-   <div class="row main-content">
-     <div id="test-swipe-1" class="col s12">
-       <div class="row scrollbar" id="style-1">
-           <div class="force-overflow">
-               <%5.times do%>           
-               <div class="col s12">
-                 <div class="card barCard">
-                   
-                 </div>
-               </div>
-               <%end%>
-           </div>
-       </div>
-     </div>
-   </div>
- 
-   <div class="row map-content"> 
-     <div id="test-swipe-2" class="col s12">
-       <div id="map"></div>
-     </div>
-   </div>
- 
+    <!--지도-->
+        <div id="map" style="width:100%;height:400px;"></div>
+
+    <!--지도관련 js-->
+        <script>
+               var HOME_PATH = window.HOME_PATH || '.';
+      
+               var map = new naver.maps.Map('map', {
+                    center: new naver.maps.LatLng(37.551267, 126.941049), //지도의 초기 중심 좌표
+                    zoom: 11, //지도의 초기 줌 레벨
+                    minZoom: 7, //지도의 최소 줌 레벨
+                    zoomControl: true, //줌 컨트롤의 표시 여부
+                    zoomControlOptions: { //줌 컨트롤의 옵션
+                        position: naver.maps.Position.TOP_RIGHT
+                    }
+                });
+        
+        
+         //마커
+      
+      
+            //정문표시 마커
+              var markerOptions = {
+                   position: new naver.maps.LatLng(37.551569, 126.937696),
+                   map: map,
+                   icon: {
+                      url: "/img/문.jpg",
+                      size: new naver.maps.Size(50, 52),
+                      origin: new naver.maps.Point(0, 0),
+                      anchor: new naver.maps.Point(25, 26)}};
+              var marker = new naver.maps.Marker(markerOptions);
+            
+            //후문표시 마커
+              var markerOptions = {
+               position: new naver.maps.LatLng(37.550740, 126.943981),
+               map: map,
+               icon: {
+                  url: "/img/문.jpg",
+                  size: new naver.maps.Size(50, 52),
+                  origin: new naver.maps.Point(0, 0),
+                  anchor: new naver.maps.Point(25, 26)}};
+              var marker = new naver.maps.Marker(markerOptions);
+              
+            //남문표시 마커
+              var markerOptions = {
+               position: new naver.maps.LatLng(37.549438, 126.938863),
+               map: map,
+               icon: {
+                  url: "/img/문.jpg",
+                  size: new naver.maps.Size(50, 52),
+                  origin: new naver.maps.Point(0, 0),
+                  anchor: new naver.maps.Point(25, 26)}};
+              var marker = new naver.maps.Marker(markerOptions);
+          
+            //주점표시 마커 경도는 변수
+            
+            var marker = new naver.maps.Marker({
+              position: new naver.maps.LatLng(37.551267, 126.941049),
+              map: map});
+             
+         
+        //마커관련끝      
+    
+          </script>
