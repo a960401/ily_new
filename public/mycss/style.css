@@ -1,0 +1,93 @@
+
+/* nav bar */
+
+nav {
+  height:7vh !important;
+}
+
+.tabs {
+  height: 100%;
+}
+
+.tabs > .tab {
+  height: 100%;
+}
+
+.tab > a {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.carousel {
+  height: 100%;
+}
+
+.carousel .carousel-item {
+  height: 100%;
+}
+
+/* cocksfeed */
+
+.main-content {
+  margin-bottom: 0px;
+}
+
+.tabs-content {
+  height: 92vh !important;
+}
+
+.barCard{
+  height:200px;
+  background-image: url('https://media.timeout.com/images/102875625/image.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+
+/* 스크롤 */
+
+/* chatting message*/
+
+
+.scrollbar
+{
+	float: left;
+	height: 93vh;
+	width: 100%;
+	overflow-y: scroll;
+  /*overflow-y:hidden;*/
+	margin-bottom: 25px;
+}
+
+.force-overflow
+{
+	min-height: 450px;
+}
+
+#style-1::-webkit-scrollbar-track
+{
+  display: none;
+}
+
+#style-1::-webkit-scrollbar
+{
+  display: none;
+}
+
+#style-1::-webkit-scrollbar-thumb
+{
+  display: none;
+}
+
+/* map */
+
+#test-swipe-2 {
+  padding-top:10px;
+}
+
+#test-swipe-2 > #map {
+  width:100%;
+  height:100%;
+}
