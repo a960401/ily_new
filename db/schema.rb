@@ -17,8 +17,6 @@ ActiveRecord::Schema.define(version: 20170507062426) do
     t.text     "content"
     t.string   "picture"
     t.string   "description"
-    t.integer  "latitude"
-    t.integer  "longitude"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -44,6 +42,15 @@ ActiveRecord::Schema.define(version: 20170507062426) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "comments", force: :cascade do |t|
+    t.string   "content"
+    t.integer  "food_id"
+    t.integer  "bar_id"
+    t.integer  "snack_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "foods", force: :cascade do |t|
     t.string   "title"
     t.text     "content"
@@ -53,6 +60,11 @@ ActiveRecord::Schema.define(version: 20170507062426) do
     t.string   "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "schedules", force: :cascade do |t|
