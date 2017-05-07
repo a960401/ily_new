@@ -5,7 +5,8 @@ class CreateBars < ActiveRecord::Migration[5.0]
       t.text :content
       t.string :picture
       t.string :description
-
+      t.integer :latitude
+      t.integer	:longitude
       t.timestamps
     end
   end

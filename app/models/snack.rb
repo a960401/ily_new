@@ -1,3 +1,3 @@
 class Snack < ApplicationRecord
-	has many :comment_snacks
+	has_many :comment_snacks
 end
