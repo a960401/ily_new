@@ -12,8 +12,7 @@
               <%Bar.all.each do |bar|%>           
               <div class="col s12" style="padding: 0">
                 <div class="card barCard" style="margin: 0">
-                  <%=link_to image_tag(bar.picture, class: 'full_size'), url_for(controller: 'bars', action: 'thebar')%>
-                
+                  <%=link_to(image_tag(bar.picture, class: 'full_size'), bar_path(bar.id))%>
                 </div>
               </div>
               <%end%>
@@ -21,3 +20,4 @@
       </div>
     </div>
   </div>
+  

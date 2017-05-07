@@ -3,3 +3,19 @@
      <div class="row mp1-banner-cover " style="margin: 0">
      </div>
 </a>
+
+  <div class="row main-content">
+    <div id="test-swipe-1" class="col s12" style="padding: 0">
+      <div class="row scrollbar" id="style-1">
+          <div class="force-overflow">
+              <%Snack.all.each do |snack|%>           
+              <div class="col s12" style="padding: 0">
+                <div class="card barCard" style="margin: 0">
+                  <%=link_to(image_tag(snack.picture, class: 'full_size'), snack_path(snack.id))%>
+                </div>
+              </div>
+              <%end%>
+          </div>
+      </div>
+    </div>
+  </div>
