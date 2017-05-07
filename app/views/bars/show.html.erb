@@ -22,15 +22,23 @@
                페이스북 공유
               </a>
             </div>
-            <div class="card-action "align ="center">
-                <%=form_for :comment_bar do |f|%>
-                <%=f.label :content%>
-                <%=f.text_field :content%>
-                
-              
-                <%=f.submit '작성'%>
-              <%end%>
+            
+            <div class="card-action">
+                <%=form_for :comment_bar, url: bar_comment_bars_path(@bar.id) do |f|%>
+                  <%=label_tag :content%>
+                  <%=text_field_tag :content%>
+                  <%=f.submit '작성'%>
+                <%end%>
             </div>
+             
+            <div class="card-action ">
+                <%CommentBar.all.each do |comment|%>
+                  <%=comment.content%>
+                  <%=link_to '[삭제]', bar_comment_bar_path(@bar.id, comment.id), method: 'delete'%>
+                  <br>
+                <% end %>
+            </div>
+          
           </div>
         </div>
       </div>

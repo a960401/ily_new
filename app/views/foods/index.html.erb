@@ -11,7 +11,7 @@
               <%Food.all.each do |food|%>           
               <div class="col s12" style="padding: 0">
                 <div class="card barCard" style="margin: 0">
-                  <%=image_tag(food.picture, class: 'full_size')%>
+                  <%=link_to(image_tag(food.picture, class: 'full_size'), food_path(food.id))%>
                 </div>
               </div>
               <%end%>

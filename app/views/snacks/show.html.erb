@@ -28,9 +28,23 @@
                페이스북 공유
               </a>
             </div>
-            <div class="card-action "align ="center">
-                 리뷰작성 폼태그
+            
+            <div class="card-action">
+                <%=form_for :comment_snack, url: snack_comment_snacks_path(@snack.id) do |f|%>
+                  <%=label_tag :content%>
+                  <%=text_field_tag :content%>
+                  <%=f.submit '작성'%>
+                <%end%>
             </div>
+             
+            <div class="card-action ">
+                <%CommentSnack.all.each do |comment|%>
+                  <%=comment.content%>
+                  <%=link_to '[삭제]', snack_comment_snack_path(@snack.id, comment.id), method: 'delete'%>
+                  <br>
+                <% end %>
+            </div>
+            
           </div>
         </div>
       </div>
