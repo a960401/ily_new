@@ -2,12 +2,8 @@
 
 one:
   content: MyString
-  food_id: 1
-  bar_id: 1
   snack_id: 1
 
 two:
   content: MyString
-  food_id: 1
-  bar_id: 1
   snack_id: 1

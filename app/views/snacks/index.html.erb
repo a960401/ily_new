@@ -1,103 +1,15 @@
- <!--각각의푸드트럭페이지-->
-
-
-     
-
-  
-<!--푸드트럭설명관련 카드패널  -->
-  <!--변수:푸드트럭사진,메뉴,단대별주소-->
-
-   <div class="row">
-        <div class="col s12 ">
-          <div class="card">
-            <div class="card-image">
-              <img src='https://scontent-icn1-1.xx.fbcdn.net/v/t1.0-9/18199153_1923176031301228_5061988429609093159_n.jpg?oh=cef2c395d9dce5e9c23e864ed932547f&oe=59BC1721'>
-              <span class="card-title white-text ">곤자가국제학사 </span>
+ <div class="row main-content">
+  <div id="test-swipe-1" class="col s12">
+    <div class="row scrollbar" id="style-1">
+        <div class="force-overflow">
+            <%5.times do%>           
+            <div class="col s12">
+              <div class="card barCard">
+                <a href="/snacks/thesnack">마당사업</a>
+              </div>
             </div>
-            <div class="card-content "align ="center">
-                 메뉴 불닭볶음면 
-            </div>
-            <div class="card-content "align ="center">
-                 <div id="map" style="width:100%;height:200px;"></div>
-            </div>
-            <div class="card-action row" align ="center">
-               <a class="waves-effect waves-light btn yellow accent-2 black-text col s6" href="javascript:sendLink()">
-               카카오톡 공유
-              </a>
-               <a class="waves-effect waves-light btn blue white-text col s6" href="javascript:sendLink()">
-               페이스북 공유
-              </a>
-            </div>
-            <div class="card-action "align ="center">
-                 리뷰작성 폼태그
-            </div>
-          </div>
+            <%end%>
         </div>
-      </div>
-      
-
-      
-    <!--지도관련 js-->
-        <script>
-               var HOME_PATH = window.HOME_PATH || '.';
-      
-               var map = new naver.maps.Map('map', {
-                    center: new naver.maps.LatLng(37.551267, 126.941049), //지도의 초기 중심 좌표
-                    zoom: 12, //지도의 초기 줌 레벨
-                    minZoom: 10, //지도의 최소 줌 레벨
-                    zoomControl: true, //줌 컨트롤의 표시 여부
-                    zoomControlOptions: { //줌 컨트롤의 옵션
-                        position: naver.maps.Position.TOP_RIGHT
-                    }
-                });
-        
-        
-         //마커
-    
-            //푸드트럭표시 마커 경도는 변수
-            
-            var marker = new naver.maps.Marker({
-              position: new naver.maps.LatLng(37.551267, 126.941049),
-              map: map});
-             
-         
-        //마커관련끝      
-    
-          </script>
-    
-
-
-<!--카카오링크관련js-->
-  <!--변수: 포스터,분과정보,주점소개      -->
-      
-          <script type='text/javascript'>
-            //<![CDATA[
-              // // 사용할 앱의 JavaScript 키를 설정해 주세요.
-              Kakao.init('d63ea9e4dc125c484a72c4823953ffb0');
-              // // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
-              function sendLink() {
-                Kakao.Link.sendDefault({
-                  objectType: 'feed',
-                  content: {
-                    title: '곤자가국제학사',
-                    description: '#곤자가#합석 #보장 #치즈케익 #기본안주' ,
-                    imageUrl: 'https://scontent-icn1-1.xx.fbcdn.net/v/t1.0-9/18199153_1923176031301228_5061988429609093159_n.jpg?oh=cef2c395d9dce5e9c23e864ed932547f&oe=59BC1721',
-                    link: {
-                      mobileWebUrl: 'https://choeoeoeoeo-amoamor1.c9users.io/cockpago/result',
-                      webUrl: 'https://choeoeoeoeo-amoamor1.c9users.io/cockpago/result'
-                    }
-                  },
-                  buttons: [
-                    {
-                      title: '찾아가는법',
-                      link: {
-                        mobileWebUrl: 'https://choeoeoeoeo-amoamor1.c9users.io/cockpago/result',
-                        webUrl: 'https://choeoeoeoeo-amoamor1.c9users.io/cockpago/result'
-                      }
-                    }
-                  ]
-                });
-              }
-            //]]>
-          </script>
-  
+    </div>
+  </div>
+</div>
