@@ -1,16 +1,50 @@
- <!--주점탭 시작-->
-  
-    <!--지도-->
-        <div id="map" style="width:100%;height:300px;"></div>
+<!--마당사업설명관련 카드패널  -->
+  <!--변수:마당사업사진,메뉴,단대별주소-->
 
+   <div class="row">
+        <div class="col s12 ">
+          <div class="card">
+            <div class="card-image">
+              <img src='https://scontent-icn1-1.xx.fbcdn.net/v/t1.0-9/18199153_1923176031301228_5061988429609093159_n.jpg?oh=cef2c395d9dce5e9c23e864ed932547f&oe=59BC1721'>
+              <span class="card-title white-text ">곤자가국제학사 </span>
+            </div>
+            <div class="card-content "align ="center">
+                 메뉴 불닭볶음면 
+            </div>
+            <div class="card-content "align ="center">
+                 <div id="map" style="width:100%;height:200px;"></div>
+            </div>
+            <div class="card-action row" align ="center">
+               <a class="waves-effect waves-light btn yellow accent-2 black-text col s6" href="javascript:sendLink()">
+               카카오톡 공유
+              </a>
+               <a class="waves-effect waves-light btn blue white-text col s6" href="javascript:sendLink()">
+               페이스북 공유
+              </a>
+            </div>
+            <div class="card-action "align ="center">
+                <%=form_for :comment_bar do |f|%>
+                <%=f.label :content%>
+                <%=f.text_field :content%>
+                
+              
+                <%=f.submit '작성'%>
+              <%end%>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      
     <!--지도관련 js-->
         <script>
                var HOME_PATH = window.HOME_PATH || '.';
       
                var map = new naver.maps.Map('map', {
                     center: new naver.maps.LatLng(37.551267, 126.941049), //지도의 초기 중심 좌표
-                    zoom: 11, //지도의 초기 줌 레벨
-                    minZoom: 7, //지도의 최소 줌 레벨
+                    zoom: 12, //지도의 초기 줌 레벨
+                    minZoom: 10, //지도의 최소 줌 레벨
                     zoomControl: true, //줌 컨트롤의 표시 여부
                     zoomControlOptions: { //줌 컨트롤의 옵션
                         position: naver.maps.Position.TOP_RIGHT
@@ -19,42 +53,8 @@
         
         
          //마커
-      
-      
-            //정문표시 마커
-              var markerOptions = {
-                   position: new naver.maps.LatLng(37.551569, 126.937696),
-                   map: map,
-                   icon: {
-                      url: "/img/문.jpg",
-                      size: new naver.maps.Size(50, 52),
-                      origin: new naver.maps.Point(0, 0),
-                      anchor: new naver.maps.Point(25, 26)}};
-              var marker = new naver.maps.Marker(markerOptions);
-            
-            //후문표시 마커
-              var markerOptions = {
-               position: new naver.maps.LatLng(37.550740, 126.943981),
-               map: map,
-               icon: {
-                  url: "/img/문.jpg",
-                  size: new naver.maps.Size(50, 52),
-                  origin: new naver.maps.Point(0, 0),
-                  anchor: new naver.maps.Point(25, 26)}};
-              var marker = new naver.maps.Marker(markerOptions);
-              
-            //남문표시 마커
-              var markerOptions = {
-               position: new naver.maps.LatLng(37.549438, 126.938863),
-               map: map,
-               icon: {
-                  url: "/img/문.jpg",
-                  size: new naver.maps.Size(50, 52),
-                  origin: new naver.maps.Point(0, 0),
-                  anchor: new naver.maps.Point(25, 26)}};
-              var marker = new naver.maps.Marker(markerOptions);
-          
-            //주점표시 마커 경도는 변수
+    
+            //푸드트럭표시 마커 경도는 변수
             
             var marker = new naver.maps.Marker({
               position: new naver.maps.LatLng(37.551267, 126.941049),
@@ -64,17 +64,7 @@
         //마커관련끝      
     
           </script>
-
-<!--길찾기&카카오톡 공유-->
-
-  <!--변수:길찾기주소(단대별주소)-->
-    <div class="row card-panel ">
-        <a class="waves-effect waves-light btn green white-text col s12" href="http://map.naver.com/?elng=594e5ec910eb154400eae85a164bd3a2&eelat=&elat=705752af70bfb2d1cea3d8d69006b4b9&eText=%EC%84%9C%EA%B0%95%EB%8C%80%ED%95%99%EA%B5%90%EC%B2%AD%EB%85%84%EA%B4%91%EC%9E%A5&eelng=">
-          길찾기
-        </a>
-    </div>
     
-  
 
 
 <!--카카오링크관련js-->
@@ -111,41 +101,4 @@
             //]]>
           </script>
   
-  
-<!--주점설명관련 카드패널  -->
-  <!--변수:주점포스터,메뉴,단대별주소-->
-
-   <div class="row">
-        <div class="col s12 ">
-          <div class="card">
-            <div class="card-image">
-              <img src='https://scontent-icn1-1.xx.fbcdn.net/v/t1.0-9/18199153_1923176031301228_5061988429609093159_n.jpg?oh=cef2c395d9dce5e9c23e864ed932547f&oe=59BC1721'>
-              <span class="card-title white-text ">곤자가국제학사 </span>
-            </div>
-            <div class="card-content; text-align: center">
-              <p>메뉴 불닭볶음면 5000원.</p>
-            </div>
-            <div class="card-action row" align ="center">
-               <a class="waves-effect waves-light btn yellow accent-2 black-text col s6" href="javascript:sendLink()">
-               카카오톡 공유
-              </a>
-               <a class="waves-effect waves-light btn blue white-text col s6" href="javascript:sendLink()">
-               페이스북 공유
-              </a>
-              
-            </div>
-            <div class="card-content">
-
-
-              <%=form_for :comment_bar do |f|%>
-                <%=f.label :content%>
-                <%=f.text_field :content%>
-                
-              
-                <%=f.submit '작성'%>
-              <%end%>
-            </div>
-
-          </div>
-        </div>
-      </div>
+       
