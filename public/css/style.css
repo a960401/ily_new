@@ -5,11 +5,23 @@
  *
  * Made By MaterializeCSS.com
  */
+@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
+div {font-family: 'Hanna', sans-serif;}
+ul {font-family: 'Hanna', sans-serif;}
+li {font-family: 'Hanna', sans-serif;}
 
-nav ul a,
 nav .brand-logo {
   color: #444;
 }
+
+
+
+
+
+.jua {font-family:'BM JUA','배달의민족 주아',sans-serif;}
+
+.hana{font-family:'BM HANNA','배달의민족 한나', sans-serif; }
+
 
 p {
   line-height: 2rem;
