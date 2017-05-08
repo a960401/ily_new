@@ -1,48 +1,42 @@
- <!--각각의푸드트럭페이지-->
-
-
-     
-
-  
-<!--푸드트럭설명관련 카드패널  -->
-  <!--변수:푸드트럭사진,메뉴,단대별주소-->
+<!--마당사업설명관련 카드패널  -->
+  <!--변수:마당사업사진,메뉴,단대별주소-->
 
    <div class="row">
         <div class="col s12 ">
           <div class="card">
             <div class="card-image">
-              <img src='https://scontent-icn1-1.xx.fbcdn.net/v/t1.0-9/18199153_1923176031301228_5061988429609093159_n.jpg?oh=cef2c395d9dce5e9c23e864ed932547f&oe=59BC1721'>
-              <span class="card-title white-text ">곤자가국제학사 </span>
+              <img src='/dummy.jpg'>
+              <span class="card-title white-text "> 케이크맛있다 </span>
             </div>
             <div class="card-content "align ="center">
-                 메뉴 불닭볶음면 
+                 메뉴 장미케익
             </div>
             <div class="card-content "align ="center">
                  <div id="map" style="width:100%;height:200px;"></div>
             </div>
-            <div class="card-action row" align ="center">
-               <a class="waves-effect waves-light btn yellow accent-2 black-text col s6" href="javascript:sendLink()">
-               카카오톡 공유
+            <div class="row snsbtn " align ="center" >
+               <a href="javascript:sendLink()">
+                 <div class ="kakaobtn"> </div>
               </a>
-               <a class="waves-effect waves-light btn blue white-text col s6" href="javascript:sendLink()">
-               페이스북 공유
-              </a>
+               
             </div>
+            
             <div class="card-action">
-              <%=form_for :comment_food, url: food_comment_foods_path(@food.id) do |f|%>
-                <%=label_tag :content%>
-                <%=text_field_tag :content%>
-                <%=f.submit '작성'%>
-              <%end%>
-          </div>
-           
-          <div class="card-action ">
-              <%CommentFood.all.each do |comment|%>
-                <%=comment.content%>
-                <%=link_to '[삭제]', food_comment_food_path(@food.id, comment.id), method: 'delete'%>
-                <br>
-              <% end %>
-          </div>
+                <%=form_for :comment_bar, url: bar_comment_bars_path(@bar.id) do |f|%>
+                  <%=label_tag :content%>
+                  <%=text_field_tag :content%>
+                  <%=f.submit '작성'%>
+                <%end%>
+            </div>
+             
+            <div class="card-action ">
+                <%CommentBar.all.each do |comment|%>
+                  <%=comment.content%>
+                  <%=link_to '[삭제]', bar_comment_bar_path(@bar.id, comment.id), method: 'delete'%>
+                  <br>
+                <% end %>
+            </div>
+          
           </div>
         </div>
       </div>
@@ -101,7 +95,7 @@
                   },
                   buttons: [
                     {
-                      title: '찾아가는법',
+                      title: '이거 어딨',
                       link: {
                         mobileWebUrl: 'https://choeoeoeoeo-amoamor1.c9users.io/cockpago/result',
                         webUrl: 'https://choeoeoeoeo-amoamor1.c9users.io/cockpago/result'
@@ -113,3 +107,4 @@
             //]]>
           </script>
   
+       

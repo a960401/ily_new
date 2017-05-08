@@ -105,3 +105,73 @@ footer.page-footer {
   height:11vh;
   
 }
+
+
+
+.snsbtn{
+  position: relative;
+  background-color: inherit;
+  border-top: 1px solid rgba(160,160,160,0.2);
+  border-bottom: 1px solid rgba(160,160,160,0.2);
+  margin-bottom: 0;
+  padding: 5px 10px;
+}
+
+.kakaobtn {
+  background-image: url(/kakaobtn.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% auto ;
+  background-position: center center;
+  width:100vh;
+  max-width: 90%;
+  height:10vh;
+  max-height:100%;
+  
+}
+.kakaobtn1 {
+  background-image: url(/kakaobtn1.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% auto ;
+  background-position: center center;
+  width:100vh;
+  max-width: 90%;
+  height:10vh;
+  max-height:100%;
+  
+}
+
+.naverbtn {
+  background-image: url(/naverbtn.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% auto ;
+  background-position: center center;
+  width:100vh;
+  max-width: 90%;
+  height:10vh;
+  max-height:100%;
+  
+}
+
+.naverbtn1 {
+  background-image: url(/naverbtn1.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% auto ;
+  background-position: center center;
+  width:100vh;
+  max-width: 90%;
+  height:10vh;
+  max-height:100%;
+  
+}
+
+.facebookbtn {
+  background-image: url(/facebookbtn.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% auto ;
+  background-position: center center;
+  width:100vh;
+  max-width: 90%;
+  height:10vh;
+  max-height:100%;
+  
+}
