@@ -6,15 +6,36 @@
  * Made By MaterializeCSS.com
  */
 @import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
-div {font-family: 'Hanna', sans-serif;}
-ul {font-family: 'Hanna', sans-serif;}
-li {font-family: 'Hanna', sans-serif;}
+
+
+div {font-family:'hanna','배달의민족 주아', sans-serif;}
+ul {font-family: 'hanna;','배달의민족 주아', sans-serif;}
+li {font-family: 'hanna','배달의민족 주아', sans-serif;}
 
 nav .brand-logo {
   color: #444;
 }
 
+.nav-tab {
+  height:6vh !important;
+  font-size: smaller;
+}
 
+
+.tabs {
+  height: 100%;
+}
+
+.tabs > .tab {
+  height: 100%;
+}
+
+.tab > a {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+   font-size: 4px;
+}
 
 
 
