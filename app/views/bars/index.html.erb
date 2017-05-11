@@ -1,18 +1,39 @@
-
+<style>
+.overlay {
+  position: relative;
+  
+}
+  .overlay-p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    background-color: rgba(0,0,0,.5); 
+  }
+</style>
+<!--와일리광고바-->
   <div class="row main-content">
     <div id="test-swipe-1" class="col s12" style="padding: 0">
       <div class="row scrollbar" id="style-1">
           <div class="force-overflow">
-    <!--와일리광고바-->          
+              
               <a href="https://www.facebook.com/theyily/">
-                <div class="row mp1-banner-cover " style="margin: 0">
+                <div class="row mp1-banner-cover" style="margin: 0">
                 </div>
               </a>
-    <!--피드-->
+              
               <%Bar.all.each do |bar|%>           
               <div class="col s12" style="padding: 0">
                 <div class="card barCard" style="margin: 0">
-                  <%=link_to(image_tag(bar.picture, class: 'full_size'), bar_path(bar.id))%>
+                
+                  <%=link_to bar_path(bar.id), class: 'overlay' do %>
+                    
+                    <%= image_tag(bar.picture, class: 'full_size') %>
+                    <p class="overlay-p">asdf</p>
+                   
+                  <%end%>
+                
                 </div>
               </div>
               <%end%>
