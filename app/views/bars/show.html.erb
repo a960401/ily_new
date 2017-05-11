@@ -1,41 +1,45 @@
-            
+       
             <div class="card "align ="center">
-                <div id="map" style="width:100%;height:280px;"></div>
                 
+        <!--지도 -->        
+                <div id="map" style="width:100%;height:280px;"></div>
+        <!--길찾기-->
                 <div class="card-content "align ="center">
-                 <a href="javascript:sendLink()">
+                 <a href="http://map.naver.com/?eText=%EC%84%9C%EA%B0%95%EB%8C%80%ED%95%99%EA%B5%90%EC%9A%B4%EB%8F%99%EC%9E%A5&eType=SITE_1&edid=18769949&elng=d654589498c872da49be5fcf0ad1dbf6&elat=c8d521a325fbfdc76ff758999dff6cac">
                    <div class ="naverbtn1"> </div>
                  </a>
                 </div>
             </div>
+            
+            <!--https://m.map.naver.com/directions/?menu=route&sname=&sx=&sy=&ename=국제인문학부A섹주점&ex=37.551284&ey=126.939254&pathType=0&showMap=true#-->
               
   
-
+      <!--설명카드-->
            <div class="card">
-            <div class="card-image">
-              <img src='/dummy.jpg'>
-              <span class="card-title white-text "> 케이크맛있다 </span>
-            </div>
+           <!--이미지카드-->
+                <div class="card-image">
+                  <img src='/dummy.jpg'>
+                  <span class="card-title white-text "> 케이크맛있다 </span>
+                </div>
             
             
-                  <div class="card-content "align ="center">
+                 <div class="card-content "align ="center">
                        <div class="row">
                         메뉴 장미케잌
                        </div>
                  
-      <!--카카오톡버튼-->
+          <!--카카오톡버튼-->
                         <a href="javascript:sendLink()">
                           <div class ="kakaobtn1"> </div>
                         </a>
                      
                     
-      <!--페이스북버튼-->
-                      <a href="http://www.facebook.com/sharer/sharer.php?u=https://ily-new-amoamor1.c9users.io/bars/1">
-                        <div class="facebookbtn" data-href="https://ily-new-amoamor1.c9users.io/bars/" data-layout="button" data-size="large" data-mobile-iframe="true">
-                        </div>
-                      </a>
-                       
-                     
+          <!--페이스북버튼-->
+                        <a href="http://www.facebook.com/sharer/sharer.php?u=https://ily-new-amoamor1.c9users.io/bars/1">
+                            <div class="facebookbtn" data-href="https://ily-new-amoamor1.c9users.io/bars/" data-layout="button" data-size="large" data-mobile-iframe="true">
+                            </div>
+                        </a>
+            
                  </div>
             </div>
           
@@ -59,7 +63,7 @@
         
          //마커
     
-            //sgjmpnsghmpnsgnmpn푸드트럭표시 마커 경도는 변수
+            //푸드트럭표시 마커 경도는 변수
             
             var marker = new naver.maps.Marker({
               position: new naver.maps.LatLng(37.551267, 126.941049),
