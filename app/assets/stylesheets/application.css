@@ -40,15 +40,25 @@
 
 .barCard {
     height: 23vh;
-    background-image: url(https://media.timeout.com/images/102875625/image.jpg);
+    /*background-image: url(https://media.timeout.com/images/102875625/image.jpg);*/
     background-size: cover;
     background-position: center center;
+}
+
+.incard{
+	width: 100%;
+	height: 5vh;	
+	color: #f00000;
+	background-color: black;	
+	opacity: 0.1;
+
 }
 
 .card .barCard{
 	margin-top: 0;
 	margin-bottom:  0;
 }
+
 .post-box{
 	height: 50vh;
     width: 100%;
