@@ -31,6 +31,7 @@ Rails.application.routes.draw do
   get 'foods/thefood'
 
   get 'bars/search'
+  get 'bars/timeline'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   
