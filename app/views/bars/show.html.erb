@@ -18,14 +18,14 @@
            <div class="card">
            <!--이미지카드-->
                 <div class="card-image">
-                  <img src='/dummy.jpg'>
-                  <span class="card-title white-text "> 케이크맛있다 </span>
+                  <%=image_tag @bar.picture%>
+                  <span class="card-title white-text "> <%=@bar.title%> </span>
                 </div>
             
             
                  <div class="card-content "align ="center">
                        <div class="row">
-                        메뉴 장미케잌
+                          <%=@bar.content%>
                        </div>
                  
           <!--카카오톡버튼-->
