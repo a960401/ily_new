@@ -1,27 +1,29 @@
+
+
 <!--와일리광고바-->
   <div class="row main-content">
     <div id="test-swipe-1" class="col s12" style="padding: 0">
       <div class="row scrollbar" id="style-1">
-          <div class="force-overflow">
-              
+          <div class="force-overflow">              
               <a href="https://www.facebook.com/theyily/">
                 <div class="row mp1-banner-cover" style="margin: 0">
                 </div>
               </a>
-              
-              <%Bar.all.each do |bar|%>           
-              <div class="col s12" style="padding: 0">
-                <div class="card barCard" style="margin: 0">
-                
-                   <%=link_to bar_path(bar.id), class: 'overlay' do %>
-                    <%= image_tag(bar.picture, class: 'full_size') %>
-                    <p class="overlay-p"><%=bar.title + " / " + bar.description%></p>
-                   
-                  <%end%>
-                
-                </div>
+
+              <div class="nav-wrapper">
+                <form action="/bars/search">
+                  <div class="col 10 offset-s1" >
+                    <div class="input-field white">
+                      <input id="search" type="search" name="search">
+                      <label class="label-icon" for="search"><i class="material-icons">search</i>
+                      </label>
+                      <i class="material-icons">close</i>
+                    </div>
+                  </div>
+                </form>
               </div>
-              <%end%>
+
+              
           </div>
       </div>
     </div>
