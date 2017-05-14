@@ -1,15 +1,22 @@
-<div class="row main-content">
-  <div id="test-swipe-1" class="col s12" style="padding: 0">
-    <div class="row scrollbar" id="style-1">        
-        <div class="force-overflow">
-            <%5.times do%>           
-            <div class="col s12" style="padding: 0">
-              <div class="card barCard" style="margin: 0">
-                <a href="/foods/thefood">푸드트럭</a>
+<!--와일리광고바-->
+<a href="https://www.facebook.com/theyily/">
+     <div class="row mp1-banner-cover " style="margin: 0">
+     </div>
+</a>
+
+  <div class="row main-content">
+    <div id="test-swipe-1" class="col s12" style="padding: 0">
+      <div class="row scrollbar" id="style-1">
+          <div class="force-overflow">
+              <%Food.all.each do |food|%>           
+              <div class="col s12" style="padding: 0">
+                <div class="card barCard" style="margin: 0">
+                  <%=link_to(image_tag(food.picture, class: 'full_size'), food_path(food.id))%>
+                  <p class="overlay-p"><%=food.title%></p>
+                </div>
               </div>
-            </div>
-            <%end%>
-        </div>
+              <%end%>
+          </div>
+      </div>
     </div>
   </div>
-</div>

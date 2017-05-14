@@ -1,33 +1,4 @@
-   <!--네브바-->
-	    <nav class="nav-extended ">
-        <div class="nav-wrapper white" >
-          <a href="/" class="brand-logo"><div class ="brand-logo-img"></div></a>
-          <a href="" data-activates="mobile-demo" class="button-collapse"><i class="material-icons sogangcolor">menu</i></a>
 
-        </div>
-      
-
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="sass.html">서강대학교</a></li>
-          <li><a href="collapsible.html">이화여자대학교</a></li>
-        </ul>
-        <ul class="side-nav" id="mobile-demo">
-          <li><a href="sass.html">서강대학교</a></li>
-          <li><a href="collapsible.html">이화여자대학교</a></li>
-        </ul>
-   
-	   
-	    <div class="nav-content center">
-
-	      <ul class="tabs  tabs-transparent red darken-4 nav-tab ">
-
-	        <li class="tab"><a class="white-text" href="/bars">일일주점</a></li>
-	        <li class="tab"><a class="white-text" href="/foods/index">푸드트럭</a></li>
-	        <li class="tab"><a class="white-text" href="/snacks">마당사업</a></li>
-	        <li class="tab"><a class="white-text" href="#test4">축제일정</a></li>
-	      </ul>
-	    </div>
-	  </nav>
 
 <style>
 .overlay {
@@ -43,6 +14,7 @@
     background-color: rgba(0,0,0,.5); 
   }
 </style>
+
 <!--와일리광고바-->
   <div class="row main-content">
     <div id="test-swipe-1" class="col s12" style="padding: 0">
@@ -58,10 +30,9 @@
               <div class="col s12" style="padding: 0">
                 <div class="card barCard" style="margin: 0">
                 
-                  <%=link_to bar_path(bar.id), class: 'overlay' do %>
-                    
+                   <%=link_to bar_path(bar.id), class: 'overlay' do %>
                     <%= image_tag(bar.picture, class: 'full_size') %>
-                    <p class="overlay-p">asdf</p>
+                    <p class="overlay-p"><%=bar.title + " / " + bar.description%></p>
                    
                   <%end%>
                 

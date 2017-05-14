@@ -4,9 +4,11 @@ class CreateBars < ActiveRecord::Migration[5.0]
       t.string :title
       t.text :content
       t.string :picture
+      t.string :imageurl
+      t.string :mapurl
       t.string :description
-      t.integer :latitude
-      t.integer	:longitude
+      t.decimal :latitude, precision: 8, scale: 6
+      t.decimal	:longitude, precision: 8, scale: 6
       t.timestamps
     end
   end

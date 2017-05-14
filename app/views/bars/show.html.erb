@@ -18,14 +18,14 @@
            <div class="card">
            <!--이미지카드-->
                 <div class="card-image">
-                  <img src='/dummy.jpg'>
-                  <span class="card-title white-text "> 케이크맛있다 </span>
+                  <%=image_tag @bar.picture%>
+                  <span class="card-title white-text "> <%=@bar.title%> </span>
                 </div>
             
             
-                 <div class="card-content "align ="center">
+                 <div class="card-content " align ="center">
                        <div class="row">
-                        메뉴 장미케잌
+                          <%=@bar.content%>
                        </div>
                  
           <!--카카오톡버튼-->
@@ -66,7 +66,7 @@
             //푸드트럭표시 마커 경도는 변수
             
             var marker = new naver.maps.Marker({
-              position: new naver.maps.LatLng(37.551267, 126.941049),
+              position: new naver.maps.LatLng(@bar.latitude, @bar.longitude),
               map: map});
               
               
@@ -122,9 +122,9 @@
                 Kakao.Link.sendDefault({
                   objectType: 'feed',
                   content: {
-                    title: '곤자가국제학사',
-                    description: '#곤자가#합석 #보장 #치즈케익 #기본안주' ,
-                    imageUrl: 'https://scontent-icn1-1.xx.fbcdn.net/v/t1.0-9/18199153_1923176031301228_5061988429609093159_n.jpg?oh=cef2c395d9dce5e9c23e864ed932547f&oe=59BC1721',
+                    title: @bar.title,
+                    description: @bar.description ,
+                    imageUrl: @bar.imageurl,
                     link: {
                       mobileWebUrl: 'https://choeoeoeoeo-amoamor1.c9users.io/cockpago/result',
                       webUrl: 'https://choeoeoeoeo-amoamor1.c9users.io/cockpago/result'
