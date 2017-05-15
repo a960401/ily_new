@@ -24,8 +24,22 @@
   main {
     flex: 1 0 auto;
   }
+.nav-wrapper.white{
+  display: flex;
+  align-items: center;
+  justify-content: center;	
+}
+.footer-copyright{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-
+.page-footer > .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .tab.red.darken-4.nav-tab {
   display: flex;
   align-items: center;
