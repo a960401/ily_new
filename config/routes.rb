@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   
   root 'bars#timeline'
+
+  get 'bars/admin_show'
+  get 'foods/admin_show'
+  get 'snacks/admin_show'
+  
   get 'comment_snacks/create'
 
   get 'comment_snacks/destroy'

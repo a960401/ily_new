@@ -6,7 +6,7 @@
               <div class="col s12" style="padding: 0">
                 <div class="card barCard" style="margin: 0">
                   
-                  <p class="overlay-p"><%=snack.title%></p>
+                 
                    <%=link_to snack_path(snack.id), class: 'overlay' do %>
                     <%= image_tag(snack.imageurl, class: 'full_size') %>
                     <p class="overlay-p"><%=snack.title + " / " + snack.description%></p>

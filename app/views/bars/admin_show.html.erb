@@ -1,0 +1,161 @@
+       
+            <div class="card " align ="center">
+                
+        <!--지도 -->        
+                <div id="map" style="width:100%; height:280px;"></div>
+        <!--길찾기-->
+                <div class="card-content " align ="center">
+
+                 <!-- <a href="http://map.naver.com/?eText=%EC%84%9C%EA%B0%95%EB%8C%80%ED%95%99%EA%B5%90%EC%9A%B4%EB%8F%99%EC%9E%A5&eType=SITE_1&edid=18769949&elng=d654589498c872da49be5fcf0ad1dbf6&elat=c8d521a325fbfdc76ff758999dff6cac"> -->
+               <!--   <a href="https://m.map.naver.com/directions/?menu=route&sname=출발지입니다&sx=126.9816485&sy=37.4765675
+                 &ename=<%=@bar.title%>
+                 ex=<%=@bar.latitude%>
+                 &ey=<%=@bar.longitude%>
+                 &pathType=0&showMap=true#/drive/list/%25EC%25B6%259C%25EB%25B0%259C%25EC%25A7%2580%25EC%259E%2585%25EB%258B%2588%25EB%258B%25A4,126.9816485,37.4765675,,,false,/%25EB%258F%2584%25EC%25B0%25A9%25EC%25A7%2580%25EC%259E%2585%25EB%258B%2588%25EB%258B%25A4,127.0276368,37.4979502,,,false,/2
+                 "> -->
+                  <%=link_to @bar.mapurl do%>
+                   <div class ="naverbtn1"> </div>
+                  <%end%>
+                </div>
+            </div>
+            
+         
+              
+  
+      <!--설명카드-->
+           <div class="card">
+           <!--이미지카드-->
+                <div class="card-image">
+                  <%=image_tag @bar.picture%>
+                  <span class="card-title white-text "> <%=@bar.title%> </span>
+                </div>
+            
+            
+                 <div class="card-content " align ="center">
+                       <div class="row">
+                          <%=@bar.content%>
+                       </div>
+                 
+          <!--카카오톡버튼-->
+                        <a href="javascript:sendLink()">
+                          <div class ="kakaobtn1"> </div>
+                        </a>
+                     
+                    
+          <!--페이스북버튼-->
+                        <a href="http://www.facebook.com/sharer/sharer.php?u=https://ily-new-amoamor1.c9users.io/bars/1">
+                            <div class="facebookbtn" data-href="https://ily-new-amoamor1.c9users.io/bars/" data-layout="button" data-size="large" data-mobile-iframe="true">
+                            </div>
+                        </a>
+            
+                 </div>
+            </div>
+          
+    
+
+      
+    <!--지도관련 js-->
+        <script>
+               var HOME_PATH = window.HOME_PATH || '.';
+      
+               var map = new naver.maps.Map('map', {
+                    center: new naver.maps.LatLng(37.551267, 126.941049), //지도의 초기 중심 좌표
+                    zoom: 11, //지도의 초기 줌 레벨
+                    minZoom: 7, //지도의 최소 줌 레벨
+                    zoomControl: true, //줌 컨트롤의 표시 여부
+                    zoomControlOptions: { //줌 컨트롤의 옵션
+                        position: naver.maps.Position.TOP_RIGHT
+                    }
+                });
+        
+        
+         //마커
+    
+            //바 위치 마커 경도는 변수
+            
+            var marker = new naver.maps.Marker({
+              position: new naver.maps.LatLng(<%=@bar.latitude%>, <%=@bar.longitude%>),
+              map: map});
+              
+              
+           //정문표시 마커
+              var markerOptions = {
+                   position: new naver.maps.LatLng(37.551569, 126.937696),
+                   map: map,
+                   icon: {
+                      url: "/sgjm.png",
+                      size: new naver.maps.Size(50, 52),
+                      origin: new naver.maps.Point(0, 0),
+                      anchor: new naver.maps.Point(25, 26)}};
+              var marker = new naver.maps.Marker(markerOptions);
+            
+            //후문표시 마커
+              var markerOptions = {
+               position: new naver.maps.LatLng(37.550740, 126.943981),
+               map: map,
+               icon: {
+                  url: "/sghm.png",
+                  size: new naver.maps.Size(50, 52),
+                  origin: new naver.maps.Point(0, 0),
+                  anchor: new naver.maps.Point(25, 26)}};
+              var marker = new naver.maps.Marker(markerOptions);
+              
+            //남문표시 마커
+              var markerOptions = {
+               position: new naver.maps.LatLng(37.549438, 126.938863),
+               map: map,
+               icon: {
+                  url: "/sgnm.png",
+                  size: new naver.maps.Size(50, 52),
+                  origin: new naver.maps.Point(0, 0),
+                  anchor: new naver.maps.Point(25, 26)}};
+              var marker = new naver.maps.Marker(markerOptions);
+             
+         
+        //마커관련끝      
+    
+          </script>
+    
+
+
+<!--카카오링크관련js-->
+  <!--변수: 포스터,분과정보,주점소개      -->
+      
+          <script type='text/javascript'>
+            //<![CDATA[
+              // // 사용할 앱의 JavaScript 키를 설정해 주세요.
+              Kakao.init('d63ea9e4dc125c484a72c4823953ffb0');
+              // // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+              function sendLink() {
+                Kakao.Link.sendDefault({
+                  objectType: 'feed',
+                  content: {
+                    title: '<%=@bar.title%>',
+                    description: '<%=@bar.description%>' ,
+                    imageUrl: '<%=@bar.imageurl%>',
+                    link: {
+                      mobileWebUrl: 'https://ilyily-amoamor1.c9users.io/bars/index',
+                      webUrl: 'https://ilyily-amoamor1.c9users.io/bars/index'
+                    }
+                  },
+                  buttons: [
+                    {
+                      title: '주점위치 확인',
+                      link: {
+                        mobileWebUrl: 'https://ilyily-amoamor1.c9users.io/bars/index',
+                        webUrl: 'https://ilyily-amoamor1.c9users.io/bars/index'
+                      }
+                    }
+                  ]
+                });
+              }
+            //]]>
+          </script>
+ 
+ 
+
+
+          
+
+  
+       
