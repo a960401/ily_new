@@ -36,7 +36,7 @@
             <div class="card-action ">
                 <%CommentFood.all.each do |comment|%>
                   <%=comment.content%>
-                  <%=link_to '[삭제]', bar_comment_bar_path(@food.id, comment.id), method: 'delete'%>
+                  <%=link_to '[삭제]', food_comment_food_path(@food.id, comment.id), method: 'delete'%>
                   <br>
                 <% end %>
             </div>
@@ -89,15 +89,9 @@
                 Kakao.Link.sendDefault({
                   objectType: 'feed',
                   content: {
-<<<<<<< HEAD
-                    title: '<%=@snack.title%>',
-                    description: '<%=@snack.description%>' ,
-                    imageUrl: '<%=@snack.imageurl%>',
-=======
                     title: '<%=@food.title%>',
                     description: '<%=@food.description%>' ,
                     imageUrl: '<%=@food.imageurl%>',
->>>>>>> bbf90395fc33132e48f5416f3d1172bfc2cc0237
                     link: {
                       mobileWebUrl: 'https://choeoeoeoeo-amoamor1.c9users.io/cockpago/result',
                       webUrl: 'https://choeoeoeoeo-amoamor1.c9users.io/cockpago/result'
@@ -105,11 +99,9 @@
                   },
                   buttons: [
                     {
-<<<<<<< HEAD
+
                       title: '푸드트럭은 어디에',
-=======
-                      title: '푸드 트럭',
->>>>>>> bbf90395fc33132e48f5416f3d1172bfc2cc0237
+
                       link: {
                         mobileWebUrl: 'https://choeoeoeoeo-amoamor1.c9users.io/cockpago/result',
                         webUrl: 'https://choeoeoeoeo-amoamor1.c9users.io/cockpago/result'
