@@ -15,15 +15,23 @@
  *= require_self
  */
 
-  body {
+body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
   }
 
-  main {
+main {
     flex: 1 0 auto;
   }
+
+.nav-wrapper.search_bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0;
+}
+
 .nav-wrapper.white{
   display: flex;
   align-items: center;
