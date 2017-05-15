@@ -16,13 +16,13 @@ ActiveRecord::Schema.define(version: 20170507062426) do
     t.string   "title"
     t.text     "content"
     t.string   "picture"
-    t.string   "imageurl"
-    t.string   "mapurl"
     t.string   "description"
+
     t.decimal  "latitude",    precision: 8, scale: 6
     t.decimal  "longitude",   precision: 9, scale: 6
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+
   end
 
   create_table "comment_bars", force: :cascade do |t|

@@ -14,6 +14,24 @@
  *= require_tree .
  *= require_self
  */
+
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+
+.tab.red.darken-4.nav-tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
  .overlay {
   position: relative;
   

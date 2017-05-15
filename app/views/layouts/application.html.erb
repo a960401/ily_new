@@ -38,17 +38,14 @@
 
   <body>
    <!--네브바-->
-  
-        
-	    <nav>
-          <div class="nav-wrapper white" >
-            <a href="/" class="brand-logo"><div class ="brand-logo-img"></div></a>
-            <a href="" data-activates="mobile-demo" class="button-collapse">
-            <i class="material-icons sogangcolor">menu</i></a>
+    <header>
+	    <nav class="nav-extended ">
+        <div class="nav-wrapper white" >
+          <a href="/" class="brand-logo"><div class ="brand-logo-img"></div></a>
+          <a href="" data-activates="mobile-demo" class="button-collapse"><i class="material-icons sogangcolor">menu</i></a>
+        </div>
 
-          </div>
-     </nav> 
-
+<!-- 
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a href="sass.html">서강대학교</a></li>
           <li><a href="collapsible.html">이화여자대학교</a></li>
@@ -56,20 +53,28 @@
         <ul class="side-nav" id="mobile-demo">
           <li><a href="sass.html">서강대학교</a></li>
           <li><a href="collapsible.html">이화여자대학교</a></li>
-        </ul>
+        </ul> -->
    
 	    
 	    <div class="nav-content center">
-	      <ul class="tabs tabs-transparent red darken-4 nav-tab ">
-	        <li class="tab col l3 s3"><a class="white-text" href="/bars">일일주점</a></li>
-	        <li class="tab col l3 s3"><a class="white-text" href="/foods/index">푸드트럭</a></li>
-	        <li class="tab col l3 s3"><a class="white-text" href="/snacks">마당사업</a></li>
-	        <li class="tab col l3 s3"><a class="white-text" href="#test4">축제일정</a></li>
-	      </ul>  
+	      <ul class="tab red darken-4 nav-tab ">
+	        <li><a class="white-text" href="/bars/index">일일주점</a></li>
+	        <li><a class="white-text" href="/foods/index">푸드트럭</a></li>
+	        <li><a class="white-text" href="/snacks/index">마당사업</a></li>
+	        <li><a class="white-text" href="/bars/timeline">축제일정</a></li>
+	      </ul>
 	    </div>
-	   
+	  </nav>
+     <a href="https://www.facebook.com/theyily/">
+                <div class="row mp1-banner-cover" style="margin: 0">
+                </div>
+              </a>
+    </header>
     
-    <%= yield %>
+    <main>
+      <%= yield %>
+    </main>
+
      <!--풋터  -->
       <footer class="page-footer red darken-4">
           

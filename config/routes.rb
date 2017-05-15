@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  root 'bars#timeline'
   get 'comment_snacks/create'
 
   get 'comment_snacks/destroy'
@@ -30,7 +31,7 @@ Rails.application.routes.draw do
   get 'snacks/thesnack'
   get 'foods/thefood'
 
-  get 'bars/search'
+  post 'bars/search'
   get 'bars/timeline'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
