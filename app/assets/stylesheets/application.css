@@ -24,6 +24,31 @@ body {
 main {
     flex: 1 0 auto;
   }
+  
+.parent {
+  height: 18vh;
+  position: relative
+}  
+
+.row.wily{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin :10;
+  
+  background-color: black;
+  background-image: url(/ilycover.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+  
+/*.mp1-banner-cover{*/
+/*  background-size: contain;*/
+/*  background-color: black;*/
+/*}*/
 
 .nav-wrapper.search_bar {
   display: flex;
