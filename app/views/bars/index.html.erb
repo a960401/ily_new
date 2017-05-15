@@ -2,20 +2,52 @@
   <div class="row main-content">
     <div id="test-swipe-1" class="col s12" style="padding: 0">
       <div class="row scrollbar" id="style-1">
-          <div class="force-overflow">              
-
-              <div class="nav-wrapper search_bar">
-                <%=form_tag '/bars/search' do%>
-                  <div class="col 10" >
-                    <div class="input-field white">
-                      <input id="search" type="search" name="search">
-                      <label class="label-icon" for="search"><i class="material-icons">search</i>
-                      </label>
-                      <i class="material-icons">close</i>
-                    </div>
+          <div class="force-overflow">   
+          
+          
+          
+                 <div class="row">
+                        <div class="col s12 ">
+                            <div class="card">
+                                
+                                
+                                <div class="card-content "align ="center">
+                                    <h3>주점 검색기</h3>  
+                               
+                       
+                     
+                  <!--검색창-->
+                                <div class="nav-wrapper search_bar">
+                                  <%=form_tag '/bars/search' do%>
+                                    <div class="col 12" >
+                                      <div class="input-field white">
+                                        <input id="search" type="search" name="search">
+                                        <label class="label-icon" for="search"><i class="material-icons">search</i>
+                                        </label>
+                                        <i class="material-icons">close</i>
+                                      </div>
+                                    </div>
+                                  <%end%>
+                                </div>
+              
+              
+              
+                                
+                                       
+                                   동아리이름으로 검색 ex) 서광회, HUG <br>
+                                   학부이름으로 검색 ex)경영, 경영학부 <br>
+                                   과이름으로 검색 ex) 전자, 전자과    <br>
+                                   
+                                   섹션으로 검색 ex) A섹 , A섹션
+                                             
+                                           
+                                  </div>
+                      </div>
                   </div>
-                <%end%>
               </div>
+
+
+
 
               
           </div>
