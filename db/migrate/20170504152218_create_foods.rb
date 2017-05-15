@@ -4,8 +4,8 @@ class CreateFoods < ActiveRecord::Migration[5.0]
       t.string :title
       t.text :content
       t.string :picture
-      t.integer :latitude
-      t.integer :longitude
+      t.integer :latitude, precision: 8, scale: 6
+      t.integer :longitude, precision: 9, scale: 6
       t.string :description
 
       t.timestamps
