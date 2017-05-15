@@ -48,13 +48,13 @@ ActiveRecord::Schema.define(version: 20170507062426) do
 
   create_table "foods", force: :cascade do |t|
     t.string   "title"
-    t.text     "content"
-    t.string   "picture"
-    t.integer  "latitude"
-    t.integer  "longitude"
+    t.string   "content"
+    t.string   "imageurl"
+    t.decimal  "latitude",    precision: 8, scale: 6
+    t.decimal  "longitude",   precision: 9, scale: 6
     t.string   "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
   end
 
   create_table "schedules", force: :cascade do |t|
@@ -64,14 +64,13 @@ ActiveRecord::Schema.define(version: 20170507062426) do
 
   create_table "snacks", force: :cascade do |t|
     t.string   "title"
-    t.string   "section"
     t.text     "content"
-    t.string   "picture"
-    t.integer  "latitude"
-    t.integer  "longitude"
+    t.string   "imageurl"
+    t.decimal  "latitude",    precision: 8, scale: 6
+    t.decimal  "longitude",   precision: 9, scale: 6
     t.string   "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
   end
 
 end

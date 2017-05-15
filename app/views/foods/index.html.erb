@@ -2,11 +2,16 @@
     <div id="test-swipe-1" class="col s12" style="padding: 0">
       <div class="row scrollbar" id="style-1">
           <div class="force-overflow">
-              <%Food.all.each do |food|%>           
+             <%Food.all.each do |food|%>           
               <div class="col s12" style="padding: 0">
                 <div class="card barCard" style="margin: 0">
-                  <%=link_to(image_tag(food.picture, class: 'full_size'), food_path(food.id))%>
+                  
                   <p class="overlay-p"><%=food.title%></p>
+                   <%=link_to food_path(food.id), class: 'overlay' do %>
+                    <%= image_tag(food.imageurl, class: 'full_size') %>
+                    <p class="overlay-p"><%=food.title + " / " + food.description%></p>
+                   
+                  <%end%>
                 </div>
               </div>
               <%end%>
