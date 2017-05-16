@@ -18,7 +18,7 @@
                      </div>     
       <!--카카오톡버튼-->
                         <a href="javascript:sendLink()">
-                          <div class ="kakaobtn1"> </div>
+                          <div class ="kakaobtn"> </div>
                         </a>
                      
                  </div>
@@ -30,7 +30,7 @@
                   <%=f.submit '작성'%>
                 <%end%>
             </div>
-             
+               
             <div class="card-action ">
                 <%CommentFood.all.each do |comment|%>
                   <%=comment.content%>
