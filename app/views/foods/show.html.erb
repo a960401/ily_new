@@ -8,7 +8,7 @@
 
               <%=image_tag @food.imageurl%>
               
-                <span class="card-title white-text" > <%=@food.title%> </span>
+                <span class="card-title" style="color: #ef5350 " > <%=@food.title%> </span>
               
             </div>
             <div class="card-content "  align="center">
@@ -17,8 +17,10 @@
             </div>
             
             <div class="card-content " align ="center">
-                    <div class="row">
-                          <%=@food.content%>
+                    <div class="row" style="font-size: 5vh">
+                          <%@food.content.gsub("\"","").split(',').each do |food|%>
+                            <p style="padding-top: 2vh"><%=food%></p>
+                          <%end%>
                      </div>     
       <!--카카오톡버튼-->
                         <a href="javascript:sendLink()">

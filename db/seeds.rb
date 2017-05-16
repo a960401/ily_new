@@ -39,7 +39,7 @@ csv_text=File.read(Rails.root.join('lib', 'seeds', 'bar_seed2.csv'))
 csv=CSV.parse(csv_text, :headers => true, :encoding => 'UTF-8')
 csv.each do |row|
     bar=Bar.new
-    bar.id=row['id']
+    #bar.id=row['id']
     bar.title=row['title']
     bar.content=row['content']
     bar.description=row['description']
@@ -55,7 +55,7 @@ snack_text=File.read(Rails.root.join('lib', 'seeds', 'snack_seed.csv'))
 snack=CSV.parse(snack_text, :headers => true, :encoding => 'UTF-8')
 snack.each do |row|
     snack=Snack.new
-    snack.id=row['id']
+    #snack.id=row['id']
     snack.title=row['title']
     snack.content=row['content']
     snack.latitude=row['latitude']
@@ -65,11 +65,11 @@ snack.each do |row|
     snack.save
 end
 
-food_text=File.read(Rails.root.join('lib', 'seeds', 'food_seed.csv'))
+food_text=File.read(Rails.root.join('lib', 'seeds', 'food_seed2.csv'))
 foods=CSV.parse(food_text, :headers => true, :encoding => 'UTF-8')
 foods.each do |row|
     food=Food.new
-    food.id=row['id']
+    #food.id=row['id']
     food.title=row['title']
     food.content=row['content']
     food.latitude=row['latitude']

@@ -9,7 +9,7 @@
                   
                    <%=link_to food_path(food.id), class: 'overlay' do %>
                     <%= image_tag(food.imageurl, class: 'full_size') %>
-                    <p class="overlay-p"><%=food.title + " / " + food.description%></p>
+                    <p class="overlay-p"><%=food.title + " / " + food.description.gsub("\"","") %></p>
                    
                   <%end%>
                 </div>
